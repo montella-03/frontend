@@ -1,4 +1,4 @@
-import { IconButton, Paper } from '@mui/material'
+import { Alert, IconButton, Paper } from '@mui/material'
 import { DataGrid, GridDeleteIcon, GridToolbarContainer,GridToolbarExport } from '@mui/x-data-grid';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
@@ -53,7 +53,7 @@ const Products = () => {
         const response = await axios.get('http://localhost:8080/product');
         setProducts(response.data);
       } catch (error) {
-        console.log(error);
+        Alert(error);
       }
     };
     fetchProducts();
