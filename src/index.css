@@ -9,13 +9,28 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: wheat;
+  color: rgba(74, 74, 74, 0.87);
+  background-color: rgb(239, 236, 246);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+.center {
+  height: 400px;
+  width: 300px;
+  background-color:white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input{
+  @apply  px-6 py-1 rounded-lg mx-2 mb-6 flex items-center justify-center
+}
+input:focus{
+  @apply border-gray-900 border-2
 }
 

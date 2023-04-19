@@ -1,6 +1,13 @@
 import React from 'react'
-import {Navbar,Products} from './components/index.js'
-import { Button } from '@mui/material'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import {Navbar} from './components/index.js'
+import Home from "./Pages/Home.jsx";
+import Products from './Pages/Products.jsx';
+import Orders from "./Pages/Orders.jsx";
+import Settings from "./Pages/Settings.jsx";
+import SignUp from './Pages/SignUp.jsx';
+
+
 
 
 const App=()=> {
@@ -9,10 +16,16 @@ const App=()=> {
   return (
     <div className="">
       <Navbar/>
-      <div className='my-3 ml-10'>
-        <Button variant='contained'>AddProduct</Button>
-      </div>
-      <Products/>
+      <BrowserRouter>
+      <Routes>
+        <Route index element={<SignUp />}/>
+          <Route path='/home' element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/settings" element={<Settings />} />
+        
+      </Routes>
+    </BrowserRouter>
     </div>
   )
 }

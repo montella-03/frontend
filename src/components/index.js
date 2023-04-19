@@ -1,4 +1,4 @@
 import Navbar from "./Navbar";
-import Products from "./Products";
+import Layout from "./Layout";
 
-export {Navbar,Products};
+export {Navbar,Layout};
