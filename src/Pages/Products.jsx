@@ -2,6 +2,7 @@ import { Alert, IconButton, Paper } from '@mui/material'
 import { DataGrid, GridDeleteIcon, GridToolbarContainer,GridToolbarExport } from '@mui/x-data-grid';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import Layout from '../components/Layout';
 
 
 
@@ -19,16 +20,16 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'product', headerName: 'Product', width: 150 },
-    { field: 'quality', headerName: 'Quality', width: 150 },
-    { field: 'code', headerName: 'Code', width: 150 },
-    { field: 'handler', headerName: 'Handler', width: 200 },
-    { field: 'created', headerName: 'Created', width: 250 },
-    { field: 'quantity', headerName: 'Quantity', width: 200 },
+    { field: 'id', headerName: 'ID', width: 50 },
+    { field: 'product', headerName: 'Product', width: 100 },
+    { field: 'quality', headerName: 'Quality', width: 100 },
+    { field: 'code', headerName: 'Code', width: 130 },
+    { field: 'handler', headerName: 'Handler', width: 130 },
+    { field: 'created', headerName: 'Created', width: 150 },
+    { field: 'quantity', headerName: 'Quantity', width: 130 },
     {
         field: "Action",
-        width: 100,
+        width: 80,
         renderCell: (params) => {
           const handleDelete = () => {
             const productId = params.row.id;
@@ -60,11 +61,15 @@ const Products = () => {
   }, []);
 
   return (
-    <Paper style={{ height: '500px', width: '100%' }}>
+    <Layout>
+      <h1 className='mx-8 text-sm font-bold my-8'>PRODUCTS</h1>
+    <Paper style={{ height: '400px', width: '100%',marginLeft:'10px',marginRight:'20px' }}>
       <DataGrid rows={products} columns={columns} pageSize={10} slots={{
           toolbar: CustomToolbar,
         }} />
     </Paper>
+    </Layout>
+    
   );
 };
 

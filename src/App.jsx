@@ -6,7 +6,7 @@ import Products from './Pages/Products.jsx';
 import Orders from "./Pages/Orders.jsx";
 import Settings from "./Pages/Settings.jsx";
 import SignUp from './Pages/SignUp.jsx';
-
+import Statistics from './Pages/Statistics.jsx';
 
 
 
@@ -23,6 +23,7 @@ const App=()=> {
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path='/statistics' element={<Statistics/>}/>
         
       </Routes>
     </BrowserRouter>

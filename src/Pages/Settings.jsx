@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 const Settings = () => {
   return (
-    <div>Settings</div>
+  <Layout>
+    <h1 className='mx-8 text-sm font-bold my-8'>Settings</h1>
+  </Layout>
   )
 }
 
