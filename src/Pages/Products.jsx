@@ -63,7 +63,7 @@ const Products = () => {
   return (
     <Layout>
       <h1 className='mx-8 text-sm font-bold my-8'>PRODUCTS</h1>
-    <Paper style={{ height: '400px', width: '100%',marginLeft:'10px',marginRight:'20px' }}>
+    <Paper style={{ height: '400px', width: '90%',marginLeft:'10px',marginRight:'20px' }}>
       <DataGrid rows={products} columns={columns} pageSize={10} slots={{
           toolbar: CustomToolbar,
         }} />

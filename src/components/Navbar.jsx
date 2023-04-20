@@ -10,7 +10,7 @@ const Navbar = () => {
       <GridMenuIcon />
     </IconButton>
     <Typography variant="h6" color="inherit" component="div">
-      WAKULIMA WAREHOUSE STORE
+     <h1 className='text-gray-700'> SALES STORE</h1>
     </Typography>
   </Toolbar>
 </AppBar>
