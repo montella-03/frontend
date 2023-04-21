@@ -20,13 +20,13 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 50 },
+    { field: 'id', headerName: 'Id', width: 70 },
     { field: 'product', headerName: 'Product', width: 100 },
-    { field: 'quality', headerName: 'Quality', width: 100 },
-    { field: 'code', headerName: 'Code', width: 130 },
-    { field: 'handler', headerName: 'Handler', width: 130 },
-    { field: 'created', headerName: 'Created', width: 150 },
-    { field: 'quantity', headerName: 'Quantity', width: 130 },
+    { field: 'quantity', headerName: 'Quantity', width: 100 },
+    { field: 'price', headerName: 'Price', width: 100 },
+    { field: 'status', headerName: 'Status', width: 100 },
+     { field: 'productId', headerName: 'ProductId', width: 120 },
+     { field: 'code', headerName: 'code', width: 100 },
     {
         field: "Action",
         width: 80,
@@ -64,7 +64,7 @@ const Products = () => {
     <Layout>
       <h1 className='mx-8 text-sm font-bold my-8'>PRODUCTS</h1>
     <Paper style={{ height: '400px', width: '90%',marginLeft:'10px',marginRight:'20px' }}>
-      <DataGrid rows={products} columns={columns} pageSize={10} slots={{
+      <DataGrid rows={products} columns={columns}pageSize={10} slots={{
           toolbar: CustomToolbar,
         }} />
     </Paper>
