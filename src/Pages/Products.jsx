@@ -24,12 +24,13 @@ const Products = () => {
     { field: 'product', headerName: 'Product', width: 100 },
     { field: 'quantity', headerName: 'Quantity', width: 100 },
     { field: 'price', headerName: 'Price', width: 100 },
-    { field: 'status', headerName: 'Status', width: 100 },
-     { field: 'productId', headerName: 'ProductId', width: 120 },
-     { field: 'code', headerName: 'code', width: 100 },
+    {field:'status',headerName:'status',width:100},
+    
+     { field: 'code', headerName: 'Code', width: 100 },
+     
     {
         field: "Action",
-        width: 80,
+        width: 120,
         renderCell: (params) => {
           const handleDelete = () => {
             const productId = params.row.id;
@@ -40,7 +41,7 @@ const Products = () => {
             }
           };
           return (
-            <IconButton onClick={handleDelete}>
+            <IconButton onClick={handleDelete} className='ml-6'>
               <GridDeleteIcon />
             </IconButton>
           );
