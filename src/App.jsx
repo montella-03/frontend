@@ -10,6 +10,7 @@ import Statistics from './Pages/Statistics.jsx';
 
 
 
+
 const App=()=> {
   
 
@@ -19,7 +20,7 @@ const App=()=> {
       <BrowserRouter>
       <Routes>
         <Route index element={<SignUp />}/>
-          <Route path='/home' element={<Home />} />
+          <Route path='/home' element={<Home/>} />
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/settings" element={<Settings />} />
