@@ -35,7 +35,7 @@ const Products = () => {
           const handleDelete = () => {
             const productId = params.row.id;
             try {
-                 axios.delete(`http://localhost:8080/product${productId}`)
+                 axios.delete(`http://localhost:9099/product${productId}`)
             } catch (error) {
                 console.error();
             }
@@ -52,7 +52,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/product');
+        const response = await axios.get('http://localhost:9099/product');
         setProducts(response.data);
       } catch (error) {
         Alert(error);
