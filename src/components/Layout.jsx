@@ -42,6 +42,14 @@ const Layout = ({children}) => {
             
     </nav>
     <div className='w-full h-screen bg-white rounded-lg mt-1 mr-1'>
+      <div className='flex flex-col justify-end items-end mt-4 mr-5'>
+      <img
+      src='src/assets/pic.jpg'
+      className='h-20 w-20 rounded-full'
+      />
+      <p className='font-mono text-xs'>halima@gmail.com</p>
+      </div>
+      
     
     {children}
 

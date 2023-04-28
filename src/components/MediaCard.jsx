@@ -15,33 +15,25 @@ export default function MediaCard() {
 
   return (
     <Card sx={{ display: 'flex',height:200,width:300 ,marginLeft:10,
-    marginTop:5,backgroundColor:'darkblue',color:'gray'}}>
+    marginTop:5,backgroundColor:' rgb(7, 1, 19)',color:'wheat'}}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5">
-            Live From Space
+            Treanding Orders
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary" component="div">
-            Mac Miller
+          <Typography variant="subtitle1" color="white" component="div">
+            Maize
+          </Typography>
+          <Typography variant="subtitle1" color="white" component="div">
+            <h1 className='text-green-900 font-mono text-lg mt-8 font-bold'>Ksh. 900,567.02</h1>
           </Typography>
         </CardContent>
-        <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-          <IconButton aria-label="previous">
-            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-          </IconButton>
-          <IconButton aria-label="play/pause">
-            <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-          </IconButton>
-          <IconButton aria-label="next">
-            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-          </IconButton>
-        </Box>
       </Box>
       <CardMedia
         component="img"
-        sx={{ width: 100,borderRadius:50 }}
-        image="src/assets/pic.jpg"
-        alt="Live from space album cover"
+        sx={{ width: 60,height:60,marginTop:8,borderRadius:30 }}
+        image="src/assets/maize.png"
+        alt="maize picture"
       />
     </Card>
   );
