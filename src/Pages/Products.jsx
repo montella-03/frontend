@@ -66,7 +66,7 @@ const Products = () => {
 
   return (
     <Layout>
-      <h1 className='mx-8 text-sm font-bold my-8'>PRODUCTS</h1>
+      <h1 className='mx-8 text-sm font-bold my--4'>PRODUCTS</h1>
       <Button
       onClick={()=>{setHidden(!hidden)}}
       variant='contained' style={{marginLeft:20,marginBottom:5}}>Add Product</Button>
@@ -84,7 +84,6 @@ const Products = () => {
       backgroundColor: 'lightgray',
         marginLeft:30,
         borderRadius:4,
-        boxShadow:backInOut,
         paddingX:2,
         paddingY:1
     }}>
