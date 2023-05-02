@@ -9,6 +9,8 @@ import { backInOut } from 'framer-motion';
 
 
 
+
+
 const CustomToolbar=()=> {
     return (
       <GridToolbarContainer>
@@ -35,14 +37,17 @@ const Products = () => {
         field: "Action",
         width: 120,
         renderCell: (params) => {
-          const handleDelete = () => {
+          const handleDelete = async () => {
             const productId = params.row.id;
             try {
-                 axios.delete(`http://localhost:9099/product${productId}`)
+              await axios.delete(`http://localhost:8080/products/${productId}`);
+              const newProducts = products.filter(product => product.id !== productId);
+              setProducts(newProducts);
             } catch (error) {
-                console.error();
+              console.error(error);
             }
           };
+        
           return (
             <IconButton onClick={handleDelete} className='ml-6'>
               <GridDeleteIcon />
@@ -55,7 +60,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:9099/product');
+        const response = await axios.get('http://localhost:8080/product');
         setProducts(response.data);
       } catch (error) {
         Alert(error);
