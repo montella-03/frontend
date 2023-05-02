@@ -40,16 +40,16 @@ const Products = () => {
           const handleDelete = async () => {
             const productId = params.row.id;
             try {
-              await axios.delete(`http://localhost:8080/products/${productId}`);
-              const newProducts = products.filter(product => product.id !== productId);
-              setProducts(newProducts);
+              await axios.delete(`http://localhost:9099/product/${productId}`);
+              setProducts(products.filter(p => p.id !== productId));
+              
             } catch (error) {
               console.error(error);
             }
           };
         
           return (
-            <IconButton onClick={handleDelete} className='ml-6'>
+            <IconButton onClick={handleDelete} className='ml-6 bg-gray-500'>
               <GridDeleteIcon />
             </IconButton>
           );
@@ -60,7 +60,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/product');
+        const response = await axios.get('http://localhost:9099/product');
         setProducts(response.data);
       } catch (error) {
         Alert(error);

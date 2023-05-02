@@ -50,7 +50,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('https://localhost:8082/order');
+        const response = await axios.get('http://localhost:9099/order');
         setOrders(response.data);
       } catch (error) {
         Alert(error);
