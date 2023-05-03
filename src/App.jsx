@@ -7,6 +7,7 @@ import Orders from "./Pages/Orders.jsx";
 import Settings from "./Pages/Settings.jsx";
 import SignUp from './Pages/SignUp.jsx';
 import Statistics from './Pages/Statistics.jsx';
+import Welcome from './Pages/Welcome.jsx';
 
 
 
@@ -19,7 +20,8 @@ const App=()=> {
       <Navbar/>
       <BrowserRouter>
       <Routes>
-        <Route index element={<SignUp />}/>
+        <Route index element={<Welcome />}/>
+        <Route path="/signUp" element={<SignUp />}/>
           <Route path='/home' element={<Home/>} />
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
