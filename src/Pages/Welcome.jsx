@@ -3,9 +3,10 @@ import React from 'react'
 
 const Welcome = () => {
   return (
-    <Stack>
-        <h1>Welcome to Wholesales Admin panel</h1>
-    </Stack>
+    <section>
+    
+    <div class="curve"></div>
+  </section>
   )
 }
 
